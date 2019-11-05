@@ -2,13 +2,16 @@
 手写实现ssm框架
 ========
 blog地址：
-####思路：
-#####Spring
+思路：
+---------
+Spring
+---------
+Ioc：
+-------
 
-######Ioc：
-    >>   实现注解： @MyRepository  @Service @Controller @Bean @Configuration @ComponentScan  @MyAutowired @MyValue
+>>实现注解： @MyRepository  @Service @Controller @Bean @Configuration @ComponentScan  @MyAutowired @MyValue
 
-     >>  实现了用注解、配置类、xml 注册bean
+>>实现了用注解、配置类、xml 注册bean
 
 1、ApplicationContextBuilder.build( InputStream ), 根据配置文件生成配置类
 
@@ -26,9 +29,9 @@ blog地址：
 
 8、注册Controller类中的url。handerMap<url(String), method>
 
-######Aop:
-
-    >>   实现了：@MyAspect，@MyPointCut @MyBefore @MyAfter @MyAround
+Aop:
+--------
+>>实现了：@MyAspect，@MyPointCut @MyBefore @MyAfter @MyAround
 
 1、扫描到Aspect类
 
@@ -44,26 +47,18 @@ blog地址：
 
 7、ioc容器每次注入的时候，如果ProxyMap中有相应的代理类，就注入代理类。
 
-#####SpringMvc
+SpringMvc
+-----------
 
 注解： @MyRequestMapping @MyJson @MyRequestParam
 
 处理：@RequestMapping扫描注入到容器中Map<url, method>
 
-######实现页面跳转
-######返回json串
-######步骤：
-
-diapatcherServlet 拦截所有请求，初始化ioc容器（同时生成handlerMap<url(String), method > ）
-分发请求，匹配handerMap中的方法
-通过反射执行相应的方法，得到返回值。根据注解判断返回json还是页面跳转
-Mybatis
-
-用注解实现的映射接口的形式
-
-SqlSessionFacturyBuilder.build( xml) 生成相应的配置类
-生成SqlSessionFactury ,传入配置类。
-执行OpenSession（）方法，通过配置类生成Executer
-SqlSession.getMapper（Class clazz）方法，将clazz 和Executer传入指定方法生成代理对象
-Executer通过StatementHandler处理sql语句
-Executer通过ResultHandler处理sql语句返回结果
+实现页面跳转
+----
+返回json串
+----
+步骤：
+--
+............完整内容请见博客。
+===============
