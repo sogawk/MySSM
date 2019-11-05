@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans>
+    <!--<bean id="user1" class="test.bean.User">-->
+        <!--<property name="id" value="3"/>-->
+        <!--<property name="name" value="xu"/>-->
+        <!--<property name="password" value="123456"/>-->
+    <!--</bean>-->
+
+</beans>
