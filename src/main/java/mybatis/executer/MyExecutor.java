@@ -23,6 +23,7 @@ public class MyExecutor implements Executor {
     @Override
     public Object doQuery(Method method, MySelect mySelect, Object[] args) {
         String querySql = mySelect.value();
+
 //        sql中的形参
         List<String> paramList = myStatement.getSelectParam(querySql);
 //        将sql语句处理成可以被预处理的形式
