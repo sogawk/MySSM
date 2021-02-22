@@ -1,5 +1,5 @@
 # MySSM
-手写实现ssm框架
+实现轻量java web框架
 ========
 blog地址：https://blog.csdn.net/xcrazyu/article/details/102914202
 -------
